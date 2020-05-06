@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Marina's site!!!{% endblock %}</title>
+    <meta name="description" content="My Flash website">
+    <meta name="author" content="SheCodes">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600;800&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        {% include 'nav.html' %}
+        {% block heading %}{% endblock %}
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        © Copyright Marina de la Fuente
+    </footer>
+</body>
+
+
+</html>

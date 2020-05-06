@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block heading %}
+<div class="profile">
+    <img src="{{ url_for('static', filename='img/pic.jpg') }}" alt="Profile picture" class="profile__picture">
+    <h1 class="profile__name">Marina de la Fuente</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<main>
+    <h2>My Week at Flash</h2>
+    <div class="description">
+        <h3>What is Flash?</h3>
+        <p>Flash is a one week taster program, aimed at teaching you the basics of the key emerging fields in tech. This program currently focuses on Python fundamentals, web development, algorithms and data, as well as offering participants a glimpse into hardware.</p>
+    </div>
+    <div class="blog">
+        {% for project in all_projects %}
+        <article class="blog__post">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+            <a href="{{ url_for( 'delete', project_id=project.id) }}">
+                <button class="btn__post">🗑</button>
+            </a>
+        </article>
+        {% endfor %}
+        <!-- 
+        <article class="blog__post">
+            <h3>Day 1: HTML and CSS</h3>
+            <p>Understand the basics of building on the web. Learn HTML/CSS, and build your first website.</p>
+        </article>
+        <article class="blog__post">
+            <h3>Day 2: Python</h3>
+            <p>Get a bit deeper with Python, learning fundamentals of programming including loops, functions and if statements.</p>
+        </article>
+        <article class="blog__post">
+            <h3>Day 3: Flask</h3>
+            <p>We learn about what Flask is and how to make a dynamic website. </p>
+        </article>
+        <article class="blog__post">
+            <h3>Day 4: Data and Algorithms</h3>
+            <p>It's all about data! In this module we will talk through how we can work with and manipulate data through algorithms.</p>
+        </article>
+        <article class="blog__post">
+            <h3>Day 5: Hardware</h3>
+            <p>What is hardware? Work with a micropython wifi board exploring the world of hardware and how we can write software to connect to our world.</p>
+        </article> -->
+    </div>
+</main>
+{% endblock %}

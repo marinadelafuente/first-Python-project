@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block heading %}
+<div class="profile">
+    <img src="{{ url_for('static', filename='img/pic.jpg') }}" alt="Profile picture" class="profile__picture">
+    <h1 class="profile__name">Marina de la Fuente</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main class="description__about">
+    <h2 class="description__title">Who am I?</h2>
+    <p class="description__bio">I am from Spain and I have spent the last 5 years of my life living in different places, including 2 and a half years in different parts of Australia, but I have come back this time hopefully to stay. I studied Advertising and Marketing and specialised in Hospitality Marketing having worked in tourism and marketing the last few years. But it was time for a change, and finally decided to turn a new leaf and reinvent myself into a programmer through my studies in a front end bootcamp, my own projects and, now, thanks to She Codes. I am curious by nature, love to learn and hope to get into this exciting industry soon.</p>
+</main>
+{% endblock %}

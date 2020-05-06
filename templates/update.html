@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="form__title">Update project</h1>
+<form class="form" method="POST" action="{{ url_for('update') }}">
+    <div class=form__container>
+        <label class="form__label" for="name">Project name:</label>
+        <input id="name" type="text" name="name" placeholder="Project name" class="form__input">
+    </div>
+    <div class=form__container>
+        <label class="form__label" for="description">Project description:</label>
+        <textarea id="description" name="description" rows="5" placeholder="Project description" class="form__message"></textarea>
+    </div>
+    <button class="btn__update" type="submit">Send Message</button>
+</form>
+
+{% endblock %}

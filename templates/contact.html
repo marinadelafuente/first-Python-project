@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="form__title">Contact Me ✉︎ </h1>
+<form class="form" action="https://formspree.io/moqapyry" method="POST">
+    <div class=form__container>
+        <label class="form__label" for="name">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Your name" class="form__input">
+    </div>
+    <div class=form__container>
+        <label class="form__label" for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Your email" class="form__input">
+    </div>
+    <div class=form__container>
+        <label class="form__label" for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message here" class="form__message"></textarea>
+    </div>
+    <button class="btn__contact" type="submit">Send Message</button>
+</form>
+
+{% endblock %}
